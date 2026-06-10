@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Premium Weather Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="dashboard-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-wind icon-gradient"></i>
+                <h1>Sky<span>Cast</span></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="city-input" placeholder="Search location...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <section class="main-weather">
+            <div class="weather-info">
+                <h2 id="location-name">Hyderabad, India</h2>
+                <p id="weather-date">Monday, June 8</p>
+                <div class="temp-container">
+                    <span id="current-temp">28</span><span class="unit">°C</span>
+                </div>
+                <p id="weather-description">Cloudy Skies</p>
+            </div>
+            <div class="weather-visual">
+                <div class="weather-icon-container">
+                    <i class="fas fa-cloud-sun weather-icon-main"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-details">
+            <div class="detail-card">
+                <i class="fas fa-wind detail-icon"></i>
+                <div class="detail-info">
+                    <p class="detail-label">Wind Speed</p>
+                    <p class="detail-value" id="wind-speed">12 km/h</p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fas fa-compass detail-icon"></i>
+                <div class="detail-info">
+                    <p class="detail-label">Wind Direction</p>
+                    <p class="detail-value" id="wind-direction">180°</p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fas fa-droplet detail-icon"></i>
+                <div class="detail-info">
+                    <p class="detail-label">Humidity</p>
+                    <p class="detail-value" id="humidity">65%</p>
+                </div>
+            </div>
+            <div class="detail-card">
+                <i class="fas fa-eye detail-icon"></i>
+                <div class="detail-info">
+                    <p class="detail-label">Visibility</p>
+                    <p class="detail-value" id="visibility">10 km</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section">
+            <h3>7-Day Forecast</h3>
+            <div class="forecast-grid" id="forecast-container">
+                <!-- Forecast items will be injected by JS -->
+                <div class="forecast-item">
+                    <p class="forecast-day">Tue</p>
+                    <i class="fas fa-sun forecast-icon"></i>
+                    <p class="forecast-temp">30°</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Wed</p>
+                    <i class="fas fa-cloud-rain forecast-icon"></i>
+                    <p class="forecast-temp">26°</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Thu</p>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <p class="forecast-temp">27°</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Fri</p>
+                    <i class="fas fa-bolt forecast-icon"></i>
+                    <p class="forecast-temp">25°</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Sat</p>
+                    <i class="fas fa-sun forecast-icon"></i>
+                    <p class="forecast-temp">31°</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
